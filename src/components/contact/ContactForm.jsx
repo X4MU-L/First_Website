@@ -128,7 +128,6 @@ const ContactForm = ({ senderObject }) => {
 					}
 				);
 		}
-		setIsSubmit(false);
 	};
 	const handleSubmit = (event) => {
 		event.preventDefault();

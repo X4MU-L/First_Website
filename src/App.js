@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	Navigate,
+} from "react-router-dom";
+import Homepage from "./components/Homepage";
+import { useState, useEffect } from "react";
+import Construction from "./components/portfolio/Construction";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [isMobile, setIsMobile] = useState(false);
+	//choose the screen size
+	const handleResize = () => {
+		if (window.innerWidth > 700) {
+			setIsMobile(true);
+		} else {
+			setIsMobile(false);
+		}
+	};
+
+	// create an event listener
+	useEffect(() => {
+		window.addEventListener("resize", handleResize);
+		handleResize();
+	}, []);
+	return (
+		<div className="App">
+			<Router>
+				<Routes>
+					<Route path="/*" element={<Homepage isMobile={isMobile} />} />
+					<Route path="/portfolio/construction/" element={<Construction />} />
+				</Routes>
+			</Router>
+		</div>
+	);
 }
 
 export default App;

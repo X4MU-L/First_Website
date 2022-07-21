@@ -85,9 +85,7 @@ const DateWrapper = styled.div`
 		}
 	}
 `;
-const Datew = styled.div`
-	margin: 0;
-`;
+
 const AvailablePtag = styled.p`
 	margin: 0;
 	font-size: 0.9em;

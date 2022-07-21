@@ -99,12 +99,8 @@ const ContactForm = ({ senderObject }) => {
 	};
 
 	//OnSubmit function to submit the form
-	const handleSubmit = (event) => {
-		event.preventDefault();
-		setInputError(validate(formvalue));
-		setIsSubmit(true);
-	};
-	useEffect(() => {
+
+	const handleError = () => {
 		if (Object.keys(inputError).length === 0 && isSubmit) {
 			const YOUR_SERVICE_ID = "service_jvrtlwb";
 			const YOUR_TEMPLATE_ID = "contact_form";
@@ -133,7 +129,13 @@ const ContactForm = ({ senderObject }) => {
 				);
 		}
 		setIsSubmit(false);
-	}, [inputError]);
+	};
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		setInputError(validate(formvalue));
+		setIsSubmit(true);
+		handleError();
+	};
 
 	return (
 		<FormWrapper>

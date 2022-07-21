@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { CtaButton } from "../Hero";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { regexExpression } from "./Regex";
 import emailjs from "@emailjs/browser";
 import FormAlert from "./FormAlert";

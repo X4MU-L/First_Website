@@ -200,13 +200,14 @@ const availability = (time) => {
 		if (time < 6) {
 			hours = 5;
 			hours -= time;
-			return (message = `Be up in ${hours} hours`);
+			message = `Be up in ${hours} hours`;
 		}
 		hours = 30;
 		hours -= time;
-		return (message = `Be up in ${hours} hours`);
+		message = `Be up in ${hours} hours`;
 	}
-	return (message = `Available for work`);
+	message = `Available for work`;
+	return message;
 };
 const getAvailabilityIcon = (value) => {
 	if (value === "Available for work") return true;

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Poppins:wght@100;200;300;400;500;600&display=swap");
 :root {
 	--primary-color: rgb(0, 166, 195);
 	--secondary-color: grey;
@@ -10,7 +11,7 @@ body {
 	-ms-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-
+	font-family: poppins;
 	font-size: 16px;
 	margin: 0;
 	padding: 0;

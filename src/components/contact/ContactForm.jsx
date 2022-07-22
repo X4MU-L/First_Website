@@ -107,7 +107,7 @@ const ContactForm = ({ senderObject }) => {
 	};
 	useEffect(() => {
 		handleError();
-	}, [inputError]);
+	}, [Object.keys(inputError).length]);
 
 	const handleError = () => {
 		if (Object.keys(inputError).length === 0 && isSubmit) {

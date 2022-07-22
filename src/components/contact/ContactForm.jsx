@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { CtaButton } from "../Hero";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { regexExpression } from "./Regex";
 import emailjs from "@emailjs/browser";
 import FormAlert from "./FormAlert";
@@ -104,10 +104,8 @@ const ContactForm = ({ senderObject }) => {
 		event.preventDefault();
 		setInputError(validate(formvalue));
 		setIsSubmit(true);
-	};
-	useEffect(() => {
 		handleError();
-	}, [Object.keys(inputError).length]);
+	};
 
 	const handleError = () => {
 		if (Object.keys(inputError).length === 0 && isSubmit) {

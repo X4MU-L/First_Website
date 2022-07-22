@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { CtaButton } from "../Hero";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { regexExpression } from "./Regex";
 import emailjs from "@emailjs/browser";
 import FormAlert from "./FormAlert";
@@ -100,6 +100,15 @@ const ContactForm = ({ senderObject }) => {
 
 	//OnSubmit function to submit the form
 
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		setInputError(validate(formvalue));
+		setIsSubmit(true);
+	};
+	useEffect(() => {
+		handleError();
+	}, [inputError]);
+
 	const handleError = () => {
 		if (Object.keys(inputError).length === 0 && isSubmit) {
 			const YOUR_SERVICE_ID = "service_jvrtlwb";
@@ -127,15 +136,9 @@ const ContactForm = ({ senderObject }) => {
 						console.log(error.text);
 					}
 				);
+			setIsSubmit(false);
 		}
 	};
-	const handleSubmit = (event) => {
-		event.preventDefault();
-		setInputError(validate(formvalue));
-		setIsSubmit(true);
-		handleError();
-	};
-
 	return (
 		<FormWrapper>
 			<Form ref={form} onSubmit={handleSubmit}>

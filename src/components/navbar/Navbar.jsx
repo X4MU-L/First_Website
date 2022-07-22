@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as MenuIcon } from "../../assets/images/menu-line.svg";
 import { ReactComponent as CloseIcon } from "../../assets/images/close-line.svg";
 import MobileNav from "./MobileNav";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const NavWapper = styled.nav`
 	height: 80px;
@@ -19,6 +19,10 @@ const NavWapper = styled.nav`
 	flex: 1 1 100%;
 	padding-inline: 50px;
 	justify-content: space-between;
+	transition: all 0.4s ease-in-out;
+	background: ${(props) => (props.background ? "var(--primary-color)" : "")};
+	box-shadow: ${(props) =>
+		props.background ? "1px 2px 5px rgba(1,1,1,.3)" : ""};
 	@media (max-width: 700px) {
 		padding-inline: 25px;
 	}
@@ -56,6 +60,18 @@ const IconWrapper = styled.div`
 const links = ["About", "Portfolio", "Contact"];
 const Navbar = ({ isMobile }) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [scroll, setScroll] = useState(false);
+
+	const scrollHeader = () => {
+		if (window.scrollY >= 80) {
+			setScroll(true);
+		} else {
+			setScroll(false);
+		}
+	};
+	useEffect(() => {
+		window.addEventListener("scroll", scrollHeader);
+	}, []);
 
 	const deselectActive = (e) => {
 		const { nextElementSibling } = e.currentTarget;
@@ -65,7 +81,7 @@ const Navbar = ({ isMobile }) => {
 		nextElementSibling.querySelector(".homepage").classList.add("active");
 	};
 	return (
-		<NavWapper>
+		<NavWapper background={scroll}>
 			<LogoContainer onClick={deselectActive}>
 				<LogoDivWrapper>
 					<Link to="/">samuelcode</Link>

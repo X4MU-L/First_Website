@@ -90,7 +90,7 @@ const AvailablePtag = styled.p`
 	margin: 0;
 	font-size: 0.9em;
 	@media (max-width: 400px) {
-		font-size: 0.7em;
+		font-size: 0.6em;
 	}
 `;
 const BlinkerWrapper = styled.div`

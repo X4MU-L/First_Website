@@ -194,17 +194,19 @@ const daysOfWeek = (week) => {
 	}
 };
 const availability = (time) => {
-	let message = "";
+	let message;
 	if (time < 6 || time > 21) {
 		let hours;
 		if (time < 6) {
 			hours = 5;
 			hours -= time;
 			message = `Be up in ${hours} hours`;
+			return message;
 		}
 		hours = 30;
 		hours -= time;
 		message = `Be up in ${hours} hours`;
+		return message;
 	}
 	message = `Available for work`;
 	return message;

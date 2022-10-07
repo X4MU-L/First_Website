@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# My First Web Site.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is just a pet portfolio site built using [REACT JS](https://reactjs.org/) as part of my learning process to test my basic knowledge in [REACT JS](https://reactjs.org/), the project is currently hosted [HERE](https://samuelcode.netlify.app/) on Netlify (a free hosting plathform). 
+This Project does not have a database **as of yet**, but uses a third-party library [EMAILJS](https://dashboard.emailjs.com/) to recieve emails from contacts.
 
-## Available Scripts
+## The Frontend
 
-In the project directory, you can run:
+The frondend uses a react and currently contains 3 endpoints:
+- About `/`
+  - The about page/endpoint is homepage/about page of the site with minimal information about the page and a call to action
+- Contacts `/contact`
+  - The contacts page/endpoint is just a contact page where users can send mails with their email address and prefered name, this page also uses basic validation and regex expressions to validate email address as well as required inputs.
+- Portfolio `/portfolio`
+  - This page is meant to contain projects executed or being worked on... currently empty :sob:
+  
+ The page is responsive across all devices.
+ 
+ 
+ ## The Backend - coming soon
 
-### `npm start`
+ This project currently does not have a frontend.... :disappointed_relieved:
+ 
+ ## Going Forward
+ 
+ This project was born out a drive to test a basic learning, it is planned to evolve and add more functionalies and a backend as i am currently Learning more towards that goal.
+Will appreciate any suggestion or Ideas as well, can always reach me on [here](mailto:okolisamuel21@gmail.com), will also be glad to recieve mails on areas I have implemented badly.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Project Dependencies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To run the project locally, run the following command on the project root folder on your local.
+```
+$ npm install
+$ npm start
 
-### `npm test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Todos
+- [ ] Add basic animations logos.
+- [ ] Implement a loading animation on send message in the contact page.
+- [ ] Update Porfolio.
+- [ ] Add a backend.
+- [ ] Implement input sanitisation.
+- [ ] Host the project on a paid hosting service and acquire a domain.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks for checking the project.
